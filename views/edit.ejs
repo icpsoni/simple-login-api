@@ -1,0 +1,36 @@
+<!-- Profile Edit Page -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello User</title>
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Hello,
+        <%= user.name %>
+    </h1>
+    <div class="edit-page">
+        <div class="form">
+            <form method="post" enctype="multipart/form-data">
+
+                <h3>Current Name :
+                    <%= user.name %>
+                </h3>
+                <input type="text" name="name" placeholder="New Name" />
+                <h4>New Profile Picture</h4>
+                <input type="file" id="image" name="image" placeholder="New Profile Picture">
+                <p style="color: red;">
+                    <%= typeof msg != 'undefined' ? msg : '' %>
+                </p>
+                <button type="submit">Update My Profile</button>
+                <p class="message">
+                    <a href="/user">Go Back</a></p>
+                <p><a href="/user/logout">Log Out</a>
+                </p>
+        </div>
+        </form>
+</body>
+
+</html>
